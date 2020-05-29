@@ -501,8 +501,8 @@ static int
 _load_decimal128_from_bson(const bson_value_t *value, void *dst,
                        parsed_dtype_t *parsed)
 {
-
     char decimal128String[BSON_DECIMAL128_STRING];
+
     bson_decimal128_to_string(&value->value.v_decimal128, decimal128String);
 
     PyObject *decimalString = Py_BuildValue("s", decimal128String);
